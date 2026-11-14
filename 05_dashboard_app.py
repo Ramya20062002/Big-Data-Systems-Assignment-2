@@ -213,7 +213,7 @@ st.markdown("""
     <div class="hero-badge">● LIVE PYSPARK MLLIB ENGINE &bull; TRACK B &bull; SCENARIO 6</div>
     <h1 class="hero-title">🛡️ Fintech Real-Time Fraud & Geospatial Risk Command Center</h1>
     <div class="hero-sub">
-        BITS Pilani WILP &bull; Big Data Systems (CC ZG522) Assignment 2 &bull; Distributed Schema Flattening, Rolling Window Velocity & Random Forest Classification
+        BITS Pilani WILP &bull; Big Data Systems (CC ZG522) Assignment 2 &bull; RAMYA.K - 2026NS03046@wilp.bits-pilani.ac.in
     </div>
 </div>
 """, unsafe_allow_html=True)
