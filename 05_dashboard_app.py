@@ -118,7 +118,6 @@ def load_enriched_data():
             raw_records = json.load(f)
         df_raw = pd.json_normalize(raw_records)
 
-        # Extract geospatial coordinates [lon, lat]
         if "location.coordinates" in df_raw.columns:
             df_raw["lon"] = df_raw["location.coordinates"].apply(
                 lambda c: c[0] if isinstance(c, list) and len(c) >= 2 else np.nan
@@ -232,7 +231,6 @@ total_vol = df["amount"].sum()
 avg_fraud_amt = fraud_df["amount"].mean() if fraud_count > 0 else 0.0
 avg_legit_amt = legit_df["amount"].mean() if len(legit_df) > 0 else 0.0
 
-# Compute Live Classification Metrics if actual_label exists
 if "actual_label" in df.columns and df["actual_label"].notna().any():
     tp = int(((df["actual_label"] == 1) & (df["prediction"] == 1)).sum())
     fp = int(((df["actual_label"] == 0) & (df["prediction"] == 1)).sum())
